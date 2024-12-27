@@ -19,14 +19,15 @@ RUN . firedrake/bin/activate && \
     pip install git+https://github.com/icepack/icepack.git
 
 # Create the persistent directories
-RUN mkdir -p /scratch/midway3/$USER/icepack_cache/pyop2 && \
-    mkdir -p /scratch/midway3/$USER/icepack_cache/tsfc && \
-    mkdir -p /scratch/midway3/$USER/icepack_cache/xdg
+RUN mkdir -p /tmp/icepack_cache/pyop2 && \
+    mkdir -p /tmp/icepack_cache/tsfc && \
+    mkdir -p /tmp/icepack_cache/xdg
 
 # Set environment variables
-ENV PERSISTENT_DIR=/scratch/midway3/$USER/icepack_cache/ \
-    PYOP2_CACHE_DIR=$PERSISTENT_DIR/pyop2 \
-    FIREDRAKE_TSFC_KERNEL_CACHE_DIR=$PERSISTENT_DIR/tsfc \
-    XDG_CACHE_HOME=$PERSISTENT_DIR/xdg
+ENV PERSISTENT_DIR=/tmp/icepack_cache/
+ENV PYOP2_CACHE_DIR=${PERSISTENT_DIR}/pyop2
+ENV FIREDRAKE_TSFC_KERNEL_CACHE_DIR=${PERSISTENT_DIR}/tsfc
+ENV XDG_CACHE_HOME=${PERSISTENT_DIR}/xdg
+
 
     

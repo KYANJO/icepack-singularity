@@ -2,9 +2,9 @@
 
 # Check if /scratch/midway3 is available
 if [ -d "/scratch/midway3" ]; then
-    PERSISTENT_DIR="/scratch/midway3/$USER/icepack_cache"
+    PERSISTENT_DIR="/tmp/icepack_cache"
 else
-    PERSISTENT_DIR="/tmp/$USER/icepack_cache"
+    PERSISTENT_DIR="/tmp/icepack_cache"
 fi
 
 # Create the persistent directories
