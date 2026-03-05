@@ -1,4 +1,4 @@
-FROM pnsinha/firedrake-vanilla:latest
+FROM bkyanjo/firedrake-vanilla:latest
 WORKDIR /opt/firedrake
 
 RUN apt -y update && sudo apt -y install patchelf

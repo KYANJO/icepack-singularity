@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: pnsinha/icepack:latest
+From: bkyanjo/icepack:latest
 
 %labels
     Version v2024.09

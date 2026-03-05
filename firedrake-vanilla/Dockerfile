@@ -1,4 +1,4 @@
-FROM pnsinha/firedrake-env:latest
+FROM bkyanjo/firedrake-env:latest
 WORKDIR /opt/firedrake
 ENV PETSC_ARCH=default
 
